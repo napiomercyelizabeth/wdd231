@@ -3,10 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231 - Web Frontend Development I</title>
+    <title>WDD 231 - Web Frontend Development I - Napio Mercy Elizabeth</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/index.js" defer></script>
 </head>
 <body>
-    <h1>WDD 231: Web Frontend Development I</h1>
-    <p>Welcome to my course website!</p>
+    <header>
+        <h1>Napio Mercy Elizabeth</h1>
+        <nav>
+            <a href="#" id="menu">Menu</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="card">
+            <h2>About Me</h2>
+            <p>I am a student studying Education in IT at Lira University and completing coursework with BYU-Pathway.</p>
+        </section>
+        <section class="card">
+            <h2>Web Certificate Courses</h2>
+            <div class="filter-buttons">
+                <button id="all">All Courses</button>
+                <button id="cse">CSE Courses</button>
+                <button id="wdd">WDD Courses</button>
+            </div>
+            <div id="course-list"></div>
+            <p id="total-credits"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Napio Mercy Elizabeth | Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
