@@ -1,0 +1,60 @@
+{
+  "members": [
+    {
+      "name": "Apex Builders Ltd",
+      "address": "Plot 12, Obote Avenue, Lira",
+      "phone": "+256 700 111222",
+      "website": "https://apexbuilders.co.ug",
+      "image": "apex.jpg",
+      "membershipLevel": 3
+    },
+    {
+      "name": "Lira View Hotel",
+      "address": "Kitgum Road, Lira",
+      "phone": "+256 701 333444",
+      "website": "https://liraview.com",
+      "image": "lira.jpg",
+      "membershipLevel": 3
+    },
+    {
+      "name": "Nile Digital Solutions",
+      "address": "Railway Quarters, Lira",
+      "phone": "+256 772 555666",
+      "website": "https://niledigital.co.ug",
+      "image": "nile.jpg",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Mama City Supermarket",
+      "address": "Independence Road, Lira",
+      "phone": "+256 783 777888",
+      "website": "https://mamacity.com",
+      "image": "mamacity.jpg",
+      "membershipLevel": 2
+    },
+    {
+      "name": "Tiptop Bakery",
+      "address": "Central Market St, Lira",
+      "phone": "+256 754 999000",
+      "website": "https://tiptopbakery.co.ug",
+      "image": "tiptop.jpg",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Express Print & Design",
+      "address": "Bala Road, Lira",
+      "phone": "+256 705 123789",
+      "website": "https://expressprint.com",
+      "image": "express.jpg",
+      "membershipLevel": 1
+    },
+    {
+      "name": "Amulum Pharmacy",
+      "address": "Jinja Road, Lira",
+      "phone": "+256 776 456123",
+      "website": "https://amulumpharmacy.co.ug",
+      "image": "amulum.jpg",
+      "membershipLevel": 1
+    }
+  ]
+}

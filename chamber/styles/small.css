@@ -1,0 +1,157 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: #ff9900;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#menu {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+#menu.open::before {
+    content: "X";
+}
+
+nav {
+    width: 100%;
+}
+
+.navigation {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: none;
+}
+
+.navigation.open {
+    display: block;
+}
+
+.navigation li a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navigation li a:hover, .navigation li a.active {
+    background-color: var(--secondary-color);
+    color: #000;
+}
+
+main {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.menu-toggle {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.menu-toggle button {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Grid View Styles showing images */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.grid section {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.grid img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+}
+
+/* The list View Styles that do not show images */
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list section {
+    background: white;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list img {
+    display: none;
+}
+
+.list h3 {
+    font-size: 1rem;
+    flex: 2;
+    margin: 0;
+}
+
+.list p, .list a {
+    font-size: 0.9rem;
+    flex: 1;
+    margin: 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color:white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
