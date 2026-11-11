@@ -96,6 +96,12 @@ main {
     cursor: pointer;
 }
 
+.menu-toggle button.active {
+    background-color: var(--secondary-color);
+    color: #000;
+    font-weight: bold;
+}
+
 /* Grid View Styles showing images */
 .grid {
     display: grid;
