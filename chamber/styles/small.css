@@ -18,8 +18,8 @@ body {
     font-family: "Segoe UI", Tahoma, sans-serif;
     margin: 0;
     padding: 0;
-    background: var(--background-color);
-    color: var(--text-color);
+    background: #f3f5f7;
+    color: #1f2933;
     line-height: 1.5;
 }
 
@@ -107,8 +107,9 @@ nav {
     padding: 0;
     margin: 0;
     display: none;
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(0, 38, 77, 0.96);
     border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 .navigation.open {
@@ -118,7 +119,7 @@ nav {
 .navigation li a {
     display: block;
     padding: 0.8rem 1rem;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     text-align: center;
     font-weight: 500;
@@ -126,8 +127,8 @@ nav {
 
 .navigation li a:hover,
 .navigation li a.active {
-    background: var(--secondary-color);
-    color: var(--primary-dark);
+    background: #f9a825;
+    color: #00264d;
 }
 
 main {
@@ -184,7 +185,7 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 51, 102, 0.82);
+    background: rgba(0, 51, 102, 0.95);
     padding: 1rem 1.4rem;
     border-radius: 8px;
     text-align: center;
@@ -192,7 +193,7 @@ main {
 }
 
 .cta-button {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-weight: 700;
     font-size: 1.1rem;
@@ -200,7 +201,7 @@ main {
 
 .cta-button:hover,
 .cta-button:focus {
-    color: var(--accent-color);
+    color: #ffcc66;
 }
 
 .spotlight-container {
