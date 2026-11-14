@@ -3,18 +3,36 @@
         display: none;
     }
 
-    .navigation {
-        display: flex;
-        justify-content: flex-end;
-        margin: 0;
+    nav {
         width: auto;
     }
 
-    .navigation li a {
-        padding: 0.5rem 1rem;
+    .navigation {
+        display: flex;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        gap: 0.25rem;
+        margin: 0;
+        background: transparent;
     }
 
-    .grid {
+    .navigation li a {
+        padding: 0.65rem 1rem;
+        border-radius: 6px;
+    }
+
+    .home-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+
+    .spotlights-grid {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .hero-img {
+        max-height: 500px;
     }
 }

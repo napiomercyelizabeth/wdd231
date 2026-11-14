@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lira Chamber of Commerce</title>
+    <meta name="description" content="Welcome to the Lira Chamber of Commerce. Discover local businesses, events, and opportunities in Lira City, Uganda.">
+    <meta name="author" content="Napio Mercy Elizabeth">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="Lira Chamber of Commerce">
+    <meta property="og:description" content="Explore local businesses, community events, and member services in Lira City.">
+    <meta property="og:image" content="https://napiomercyelizabeth.github.io/wdd231/chamber/images/favicon.png">
+    <meta property="og:url" content="https://napiomercyelizabeth.github.io/wdd231/chamber/index.html">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 700px)">
+
+    <script src="scripts/home.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header>
+        <div class="logo-box">
+            <span class="site-title">Lira Chamber of Commerce</span>
+        </div>
+        <button id="menu" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false"></button>
+        <nav aria-label="Main navigation">
+            <ul id="primary-navigation" class="navigation">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <h1>Lira City Chamber of Commerce</h1>
+
+        <section class="hero-container" aria-label="Featured chamber promotion">
+            <img src="images/hero.jpg" alt="Lira City business district with active commerce and local enterprise" class="hero-img" loading="eager" width="1200" height="600">
+            <div class="cta-box">
+                <a href="#" class="cta-button">Join the Chamber</a>
+            </div>
+        </section>
+
+        <div class="home-grid">
+            <section class="events-card card" aria-labelledby="events-heading">
+                <h2 id="events-heading">Current Events</h2>
+                <ul>
+                    <li><strong>Annual Lira Trade Expo:</strong> November 25 at Obote Avenue Grounds.</li>
+                    <li><strong>Small Business Growth Workshop:</strong> December 2 at Lira View Conference Center.</li>
+                    <li><strong>Chamber Networking Dinner:</strong> December 10 at Central Hall.</li>
+                </ul>
+            </section>
+
+            <section class="weather-card card" aria-labelledby="weather-heading">
+                <h2 id="weather-heading">Weather</h2>
+                <div id="current-weather">
+                    <p><span id="current-temp">--</span>°C - <span id="weather-desc">Loading...</span></p>
+                </div>
+                <h3>3-Day Forecast</h3>
+                <ul id="forecast-list"></ul>
+            </section>
+        </div>
+
+        <section class="spotlight-container" aria-labelledby="spotlight-heading">
+            <h2 id="spotlight-heading">Company Spotlights</h2>
+            <div id="spotlight-cards" class="spotlights-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Napio Mercy Elizabeth | Uganda</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>
