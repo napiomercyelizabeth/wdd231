@@ -7,70 +7,77 @@
     <meta name="description" content="Apply for membership with the Lira Chamber of Commerce.">
     <meta name="author" content="Napio Mercy Elizabeth">
 
-    <!-- Open Graph Meta Tags -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
     <meta property="og:title" content="Join Lira Chamber of Commerce">
     <meta property="og:description" content="Become a member of the Lira Chamber of Commerce and grow your business.">
-    <meta property="og:image" content="https://napiomercyelizabeth.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:image" content="https://napiomercyelizabeth.github.io/wdd231/chamber/images/favicon.png">
     <meta property="og:url" content="https://napiomercyelizabeth.github.io/wdd231/chamber/join.html">
 
-    <link rel="icon" href="images/favicon.ico">
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
-    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/larger.css" media="(min-width: 700px)">
 
     <script src="scripts/join.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Lira Chamber of Commerce</h1>
-        <nav>
-            <a href="#" id="menu">Menu</a>
-            <a href="index.html">Home</a>
-            <a href="directory.html">Directory</a>
-            <a href="join.html" class="active">Join</a>
-            <a href="#">Discover</a>
+        <div class="logo-box">
+            <span class="site-title">Lira Chamber of Commerce</span>
+        </div>
+        <button id="menu" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false"></button>
+        <nav aria-label="Main navigation">
+            <ul id="primary-navigation" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html" class="active">Join</a></li>
+                <li><a href="#">Discover</a></li>
+            </ul>
         </nav>
     </header>
 
     <main class="join-main">
+        <h1>Join the Lira Chamber of Commerce</h1>
         <h2>Membership Application</h2>
         
         <div class="join-layout">
-            <!-- Membership Application Form -->
             <form method="get" action="thankyou.html" class="join-form">
                 <label>
                     First Name *
-                    <input type="text" name="firstName" autocomplete="given-name" required>
+                    <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required>
                 </label>
 
                 <label>
                     Last Name *
-                    <input type="text" name="lastName" autocomplete="family-name" required>
+                    <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required>
                 </label>
 
                 <label>
                     Organizational Title
-                    <input type="text" name="orgTitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    <input type="text" name="orgTitle" title="Enter your organizational title" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
                 </label>
 
                 <label>
                     Email Address *
-                    <input type="email" name="email" autocomplete="email" placeholder="example@domain.com" required>
+                    <input type="email" name="email" title="Enter a valid email address" autocomplete="email" placeholder="example@domain.com" required>
                 </label>
 
                 <label>
                     Mobile Phone Number *
-                    <input type="tel" name="phone" autocomplete="tel" required>
+                    <input type="tel" name="phone" title="Enter your mobile phone number" autocomplete="tel" required>
                 </label>
 
                 <label>
                     Business/Organization Name *
-                    <input type="text" name="businessName" autocomplete="organization" required>
+                    <input type="text" name="businessName" title="Enter your business or organization name" autocomplete="organization" required>
                 </label>
 
                 <label>
                     Membership Level
-                    <select name="membershipLevel">
+                    <select name="membershipLevel" title="Select a membership level">
                         <option value="np">NP Membership (Non-Profit - No Fee)</option>
                         <option value="bronze">Bronze Membership</option>
                         <option value="silver">Silver Membership</option>
@@ -80,16 +87,14 @@
 
                 <label>
                     Business/Organization Description
-                    <textarea name="description" rows="4"></textarea>
+                    <textarea name="description" title="Describe your business or organization" rows="4"></textarea>
                 </label>
 
-                <!-- Hidden Timestamp -->
                 <input type="hidden" name="timestamp" id="timestamp">
 
                 <input type="submit" value="Apply for Membership" class="submit-btn">
             </form>
 
-            <!-- Membership Level Cards -->
             <section class="membership-cards">
                 <h3>Membership Levels</h3>
 
@@ -119,7 +124,6 @@
             </section>
         </div>
 
-        <!-- 4 HTML Modals -->
         <dialog id="modal-np">
             <h3>Non-Profit Membership Benefits</h3>
             <p><strong>Cost:</strong> Free ($0/year)</p>
