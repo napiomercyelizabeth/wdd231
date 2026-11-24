@@ -43,3 +43,37 @@
         align-items: start;
     }
 }
+
+/* Medium View (640px - 1023px): Layout 2 using Named Grid Areas + Hover Effect */
+@media only screen and (min-width: 40rem) {
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card3"
+            "card4 card5"
+            "card6 card7"
+            "card8 card8";
+    }
+
+    /* Image hover effect active ONLY in medium/larger views */
+    .discover-card img {
+        transition: transform 0.35s ease, filter 0.35s ease;
+    }
+
+    .discover-card figure:hover img {
+        transform: scale(1.06);
+        filter: brightness(1.08) contrast(1.05);
+    }
+}
+
+/* Large Desktop View (1024px+): Layout 3 using Named Grid Areas */
+@media only screen and (min-width: 64rem) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card1 card2 card3"
+            "card4 card5 card6 card6"
+            "card7 card7 card8 card8";
+    }
+}

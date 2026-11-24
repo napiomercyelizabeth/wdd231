@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Lira - Lira Chamber of Commerce</title>
+    <meta name="description" content="Explore key landmarks, cultural sites, and business hubs in Lira, Uganda.">
+    <meta name="author" content="Napio Mercy Elizabeth">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Discover Lira - Lira Chamber of Commerce">
+    <meta property="og:description" content="Explore landmarks, education hubs, and attractions in Lira.">
+    <meta property="og:image" content="https://napiomercyelizabeth.github.io/wdd231/chamber/images/place1.webp">
+    <meta property="og:url" content="https://napiomercyelizabeth.github.io/wdd231/chamber/discover.html">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <script src="scripts/discover.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header>
+        <h1>Lira Chamber of Commerce</h1>
+        <button id="menu" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false"></button>
+        <nav aria-label="Main navigation">
+            <ul id="primary-navigation" class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="discover.html" class="active" aria-current="page">Discover</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="discover-main">
+        <h2>Discover Lira</h2>
+
+        <!-- Visitor Message Banner (Populated via localStorage) -->
+        <aside id="visitor-message" class="visitor-banner" aria-live="polite"></aside>
+
+        <!-- 8 Cards Container using Named Grid Areas -->
+        <section id="discover-grid" class="discover-grid" aria-label="Points of Interest in Lira"></section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Napio Mercy Elizabeth | Lira Chamber of Commerce</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

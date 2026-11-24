@@ -397,3 +397,99 @@ dialog ul {
     text-decoration: none;
     border-radius: 4px;
 }
+
+/* Discover Page Styles (Mobile First: 320px - 639px) */
+header h1 {
+    color: #ffffff;
+    font-size: 1.35rem;
+    margin: 0;
+}
+
+.discover-main h2 {
+    margin-top: 0;
+}
+
+.visitor-banner {
+    background-color: #e6f0f7;
+    color: #003b5c;
+    border-left: 5px solid #003b5c;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.discover-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5"
+        "card6"
+        "card7"
+        "card8";
+    gap: 1.5rem;
+}
+
+.discover-card {
+    background: #ffffff;
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.discover-card h3 {
+    color: #003b5c;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.discover-card figure {
+    margin: 0;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.discover-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.discover-card address {
+    font-style: normal;
+    font-weight: 600;
+    color: #444444;
+    font-size: 0.9rem;
+}
+
+.discover-card p {
+    margin: 0;
+    color: #222222;
+    line-height: 1.5;
+}
+
+.learn-more-btn {
+    background-color: #003b5c;
+    color: #ffffff;
+    border: none;
+    padding: 0.65rem 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.learn-more-btn:focus {
+    outline: 3px solid #f9a825;
+    outline-offset: 2px;
+}

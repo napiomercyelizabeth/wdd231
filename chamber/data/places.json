@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Lira Main Market",
+    "address": "Market Street, Lira City Center",
+    "description": "The city's main market sells fresh produce, grains, textiles, and handmade crafts.",
+    "image": "place1.webp"
+  },
+  {
+    "name": "Lira University Campus",
+    "address": "Erute North, Lira-Kamdini Highway",
+    "description": "Lira University offers programs in higher education, health, and applied research in Northern Uganda.",
+    "image": "place2.webp"
+  },
+  {
+    "name": "Akii-Bua Olympic Stadium",
+    "address": "Stadium Road, Lira",
+    "description": "The stadium is named after John Akii-Bua, Uganda's first Olympic gold medalist. It hosts sports and community events.",
+    "image": "place3.webp"
+  },
+  {
+    "name": "Barlonyo Memorial Site",
+    "address": "Ogur Sub-county, Lira District",
+    "description": "This memorial honors people affected by past violence and teaches visitors about peace and community resilience.",
+    "image": "place4.webp"
+  },
+  {
+    "name": "Lira Golf Course & Club",
+    "address": "Golf Course Road, Lira",
+    "description": "The golf course provides outdoor recreation, club activities, and space for community gatherings.",
+    "image": "place5.webp"
+  },
+  {
+    "name": "Lango Cultural Foundation Palace",
+    "address": "Junior Quarters, Lira",
+    "description": "The palace represents Lango traditions, music, local leadership, and the preservation of cultural history.",
+    "image": "place6.webp"
+  },
+  {
+    "name": "Nile Breeze Botanical Gardens",
+    "address": "Riverside Avenue, Lira",
+    "description": "The gardens have open green spaces where families can walk, gather, and attend outdoor events.",
+    "image": "place7.webp"
+  },
+  {
+    "name": "Lira Industrial & Agro-Processing Park",
+    "address": "Industrial Area, Lira",
+    "description": "The park is home to businesses that process sunflower oil, shea butter, and other regional products.",
+    "image": "place8.webp"
+  }
+]
