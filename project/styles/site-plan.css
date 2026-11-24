@@ -1,0 +1,319 @@
+/* Napio Beauty & Lifestyle Accessories - Site Plan */
+:root {
+    --primary-color: #FF9EBB;
+    --secondary-color: #FF7FA8;
+    --white: #FFFFFF;
+    --text-color: #1A1A1A;
+    --soft-pink: #FFF4F7;
+    --border-pink: #FFD1DF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: var(--soft-pink);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    z-index: 10;
+    background: var(--text-color);
+    color: var(--white);
+    padding: 0.75rem 1rem;
+}
+
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 2rem 1rem 1rem;
+    border-bottom: 5px solid var(--text-color);
+}
+
+.site-header h1 {
+    font-size: clamp(1.55rem, 5vw, 2.35rem);
+    margin-bottom: 0.35rem;
+}
+
+.site-header p {
+    font-size: 1rem;
+}
+
+.site-header nav {
+    max-width: 960px;
+    margin: 1.25rem auto 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.site-header nav a {
+    color: var(--text-color);
+    background: var(--white);
+    border: 2px solid var(--text-color);
+    border-radius: 999px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.45rem 0.75rem;
+    text-decoration: none;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus-visible {
+    background: var(--text-color);
+    color: var(--white);
+}
+
+main {
+    max-width: 960px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+.plan-card {
+    background-color: var(--white);
+    border: 2px solid var(--border-pink);
+    border-left: 8px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 18px rgba(26, 26, 26, 0.08);
+    scroll-margin-top: 1rem;
+}
+
+.plan-card h2 {
+    color: var(--text-color);
+    background: linear-gradient(to right, var(--primary-color) 0 70%, transparent 70%);
+    background-size: 100% 0.45rem;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    display: inline-block;
+    font-size: clamp(1.25rem, 4vw, 1.55rem);
+    margin-bottom: 1rem;
+    padding-bottom: 0.55rem;
+}
+
+.plan-card p {
+    margin-bottom: 0.75rem;
+}
+
+.plan-card ul {
+    margin-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+code {
+    background-color: #FFE8F0;
+    color: var(--text-color);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.scenario-box {
+    background-color: var(--soft-pink);
+    border: 2px dashed var(--secondary-color);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Color Swatches */
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.color-swatch {
+    min-height: 185px;
+    padding: 1.1rem;
+    border-radius: 8px;
+    border: 2px solid var(--text-color);
+}
+
+.color-swatch h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.primary-swatch {
+    background-color: #FF9EBB;
+    color: var(--text-color);
+}
+
+.secondary-swatch {
+    background-color: #FFFFFF;
+    color: var(--text-color);
+}
+
+.bg-swatch {
+    background-color: #FFF4F7;
+    color: var(--text-color);
+}
+
+.text-swatch {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+}
+
+.text-swatch code,
+.primary-swatch code {
+    background-color: #FFFFFF;
+    color: #1A1A1A;
+}
+
+/* Typography Samples */
+.typography-samples {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.font-box {
+    background-color: var(--soft-pink);
+    border: 2px solid var(--border-pink);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.heading-sample {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
+    background: var(--primary-color);
+    margin: -1rem -1rem 0.75rem;
+    padding: 0.75rem 1rem;
+}
+
+.body-sample {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--text-color);
+    font-size: 1.05rem;
+}
+
+/* Wireframes */
+.wireframe-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.wireframe-wrapper h3 {
+    color: var(--text-color);
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+}
+
+.wireframe {
+    border: 3px solid var(--text-color);
+    background-color: var(--white);
+    padding: 0.75rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.mobile-wf {
+    max-width: 300px;
+}
+
+.wf-box {
+    background-color: var(--white);
+    border: 2px solid var(--primary-color);
+    color: var(--text-color);
+    padding: 0.85rem;
+    text-align: center;
+    font-size: 0.82rem;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.wf-header,
+.wf-footer {
+    background-color: var(--text-color);
+    color: var(--white);
+}
+
+.wf-hero {
+    min-height: 110px;
+    display: grid;
+    place-items: center;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+.wf-grid-3,
+.wf-grid-2 {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.wf-grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.wf-grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+footer {
+    background-color: var(--text-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 2rem;
+    border-top: 5px solid var(--primary-color);
+}
+
+@media only screen and (min-width: 48rem) {
+    .wireframe-container {
+        grid-template-columns: minmax(220px, 0.7fr) 1.6fr;
+        align-items: start;
+    }
+}
+
+@media only print {
+    .skip-link,
+    .site-header nav {
+        display: none;
+    }
+
+    main {
+        margin: 1rem auto;
+    }
+
+    .plan-card {
+        break-inside: avoid;
+        box-shadow: none;
+    }
+}
