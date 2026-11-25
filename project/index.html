@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Shop Napio handmade beauty products and elegant lifestyle accessories.">
+  <meta name="author" content="Napio Mercy Elizabeth">
+  <title>Napio Beauty &amp; Lifestyle Accessories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site.css">
+  <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Napio home">NAPIO<span>Beauty &amp; Lifestyle</span></a>
+    <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"></button>
+    <nav aria-label="Main navigation">
+      <ul id="primary-nav" class="navigation">
+        <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+        <li><a href="catalog.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Handmade with love in Uganda</p>
+        <h1>Beauty for every little moment.</h1>
+        <p>Discover glossy lips, thoughtful gifts, and resin accessories made to brighten your day.</p>
+        <a class="button" href="catalog.html">Explore the collection</a>
+      </div>
+      <div class="hero-art" aria-label="Pink handmade beauty collection">
+        <span class="hero-circle"></span>
+        <span class="hero-card hero-card-one">Glossy<br><strong>confidence</strong></span>
+        <span class="hero-card hero-card-two">Made<br><strong>for you</strong></span>
+      </div>
+    </section>
+
+    <section class="featured" aria-labelledby="featured-title">
+      <div class="section-heading">
+        <p class="eyebrow">Popular now</p>
+        <h2 id="featured-title">Featured favorites</h2>
+      </div>
+      <div id="featured-products" class="product-grid" aria-live="polite"></div>
+      <p id="product-error" class="error-message" role="alert"></p>
+    </section>
+
+    <section class="story-band">
+      <div>
+        <p class="eyebrow">The Napio promise</p>
+        <h2>Small details. Beautiful meaning.</h2>
+      </div>
+      <p>Each piece is selected or made with care, using joyful colors and practical designs for everyday life.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Napio Mercy Elizabeth</p>
+    <p id="last-modified"></p>
+  </footer>
+  <dialog id="product-dialog" aria-labelledby="dialog-title">
+    <button class="dialog-close" type="button" aria-label="Close product details">&times;</button>
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>

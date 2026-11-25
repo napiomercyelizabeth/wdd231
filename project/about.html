@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn about Napio Beauty and send a custom order or product care question.">
+  <meta name="author" content="Napio Mercy Elizabeth">
+  <title>About &amp; Contact | Napio Beauty</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/site.css">
+  <script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Napio home">NAPIO<span>Beauty &amp; Lifestyle</span></a>
+    <button class="menu-button" id="menu-button" aria-expanded="false" aria-controls="primary-nav" aria-label="Open navigation"></button>
+    <nav aria-label="Main navigation">
+      <ul id="primary-nav" class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="catalog.html">Shop</a></li>
+        <li><a class="active" href="about.html" aria-current="page">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="page-heading">
+      <p class="eyebrow">Our story</p>
+      <h1>Made for joy, purpose, and everyday beauty.</h1>
+    </section>
+
+    <section class="about-layout">
+      <article class="about-card">
+        <h2>The Napio idea</h2>
+        <p>Napio is a Ugandan beauty and lifestyle brand celebrating handmade details. We create and curate useful, colorful pieces that make daily routines feel special.</p>
+        <h3>Product care</h3>
+        <p>Keep resin pieces away from heat and harsh chemicals. Wipe gently with a soft cloth and store lip products in a cool, dry place.</p>
+      </article>
+
+      <form class="contact-form" action="thankyou.html" method="get">
+        <h2>Ask or request a custom order</h2>
+        <label for="name">Full name *</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="email">Email address *</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="interest">What are you interested in?</label>
+        <select id="interest" name="interest">
+          <option value="Custom gift set">Custom gift set</option>
+          <option value="Lip gloss">Lip gloss</option>
+          <option value="Resin accessory">Resin accessory</option>
+          <option value="Product care">Product care</option>
+        </select>
+
+        <label for="message">Your message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <input type="hidden" id="submitted-at" name="submittedAt">
+        <button class="button" type="submit">Send request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="current-year"></span> Napio Mercy Elizabeth</p>
+    <p id="last-modified"></p>
+  </footer>
+</body>
+</html>

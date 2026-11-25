@@ -1,0 +1,17 @@
+[
+  {"id":1,"name":"Rosy Glaze Lip Gloss","category":"Lip Gloss","price":18000,"description":"A comfortable, sheer shine with a soft rosy tint.","material":"Vitamin E and jojoba","color":"Rose","featured":true},
+  {"id":2,"name":"Honey Kiss Gloss","category":"Lip Gloss","price":18000,"description":"Warm honey tones for a subtle everyday glow.","material":"Natural oils","color":"Honey","featured":true},
+  {"id":3,"name":"Berry Charm Gloss","category":"Lip Gloss","price":20000,"description":"A buildable berry tint that looks fresh and polished.","material":"Vitamin E","color":"Berry","featured":false},
+  {"id":4,"name":"Clear Glass Gloss","category":"Lip Gloss","price":16000,"description":"A high-shine clear gloss with a smooth, silky finish.","material":"Castor oil","color":"Clear","featured":true},
+  {"id":5,"name":"Pressed Rose Resin Mirror","category":"Resin","price":35000,"description":"A handheld mirror decorated with a delicate floral design.","material":"Epoxy resin","color":"Pink","featured":true},
+  {"id":6,"name":"Golden Heart Keyholder","category":"Resin","price":22000,"description":"A playful heart keyholder with gold flakes.","material":"Epoxy resin","color":"Gold","featured":false},
+  {"id":7,"name":"Pearl Bloom Hair Clip","category":"Resin","price":25000,"description":"A statement clip inspired by petals and pearls.","material":"Resin and metal","color":"Cream","featured":false},
+  {"id":8,"name":"Pastel Story Earrings","category":"Resin","price":28000,"description":"Lightweight everyday earrings in a pastel palette.","material":"Resin and hooks","color":"Pastel","featured":false},
+  {"id":9,"name":"Moonlight Trinket Tray","category":"Resin","price":32000,"description":"A sparkling tray for jewelry and tiny keepsakes.","material":"Epoxy resin","color":"Lavender","featured":true},
+  {"id":10,"name":"Floral Vanity Brush","category":"Personal Care","price":24000,"description":"A soft bristle brush for gentle daily hair care.","material":"Wood and bristles","color":"Pink","featured":false},
+  {"id":11,"name":"Silk Satin Scrunchie","category":"Personal Care","price":12000,"description":"A gentle scrunchie that helps reduce hair friction.","material":"Satin fabric","color":"Blush","featured":false},
+  {"id":12,"name":"Lavender Sugar Scrub","category":"Personal Care","price":26000,"description":"A soothing sugar scrub for soft, refreshed skin.","material":"Sugar and lavender","color":"Lavender","featured":false},
+  {"id":13,"name":"Rose Hand Balm","category":"Personal Care","price":17000,"description":"A nourishing hand balm with a light floral scent.","material":"Shea butter","color":"Rose","featured":false},
+  {"id":14,"name":"Pearl Makeup Pouch","category":"Personal Care","price":30000,"description":"A compact pouch for glosses, brushes, and essentials.","material":"Cotton and pearl accents","color":"Cream","featured":false},
+  {"id":15,"name":"Pink Pamper Gift Set","category":"Personal Care","price":45000,"description":"A ready-to-gift set of everyday beauty essentials.","material":"Mixed handmade goods","color":"Pink","featured":true}
+]
