@@ -1,0 +1,95 @@
+@media (min-width: 700px) {
+  .site-header {
+    grid-template-columns: 220px 1fr;
+    padding: .75rem 3rem;
+  }
+
+  .menu-button { display: none; }
+
+  .navigation {
+    position: static;
+    display: flex;
+    justify-content: flex-end;
+    gap: .25rem;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .navigation li { width: auto; }
+  .navigation a { padding: .65rem 1rem; }
+
+  .hero {
+    grid-template-columns: 1.1fr .9fr;
+    min-height: 620px;
+    padding: 4rem 3rem;
+  }
+
+  .hero-art { position: relative; display: block; height: 420px; }
+  .hero-circle {
+    position: absolute;
+    right: 8%;
+    top: 8%;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background: #ffdbe6;
+  }
+
+  .hero-card {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 155px;
+    height: 200px;
+    background: var(--white);
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+    text-align: center;
+    transform: rotate(-7deg);
+    box-shadow: 12px 12px 0 var(--pink-dark);
+  }
+
+  .hero-card strong { color: var(--pink-dark); }
+  .hero-card-one { right: 50%; bottom: 10%; }
+  .hero-card-two { right: 5%; top: 5%; transform: rotate(8deg); }
+
+  .featured,
+  .catalog-grid {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .page-heading {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .story-band {
+    grid-template-columns: 1fr 1fr;
+    align-items: end;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 3rem;
+  }
+
+  .about-layout {
+    grid-template-columns: .8fr 1.2fr;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .about-card,
+  .contact-form { padding: 2rem; }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media (min-width: 1050px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
