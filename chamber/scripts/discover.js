@@ -51,7 +51,7 @@ function renderCards(places) {
 
     places.forEach((place, index) => {
         const card = document.createElement('article');
-        card.className = `discover-card card-${index + 1}`;
+        card.className = `discover-card place-card-${index + 1}`;
 
         card.innerHTML = `
             <h3>${place.name}</h3>
