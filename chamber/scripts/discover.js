@@ -69,6 +69,6 @@ function renderCards(places) {
 
 loadPlaces();
 
-// 3. Footer Dates
+// 3. Footer Information
 document.getElementById('currentyear').textContent = new Date().getFullYear();
 document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
