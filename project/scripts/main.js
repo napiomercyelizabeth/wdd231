@@ -16,98 +16,61 @@ if (year) year.textContent = new Date().getFullYear();
 const modified = document.querySelector('#last-modified');
 if (modified) modified.textContent = `Last updated: ${document.lastModified}`;
 
-const submittedAt = document.querySelector('#submitted-at');
-if (submittedAt) submittedAt.value = new Date().toISOString();
-
-const catalogContainer = document.querySelector('#catalog-products');
 const featuredContainer = document.querySelector('#featured-products');
 const errorMessage = document.querySelector('#product-error');
-let allProducts = [];
+const dialog = document.querySelector('#product-dialog');
+const dialogContent = document.querySelector('#dialog-content');
+let featuredProducts = [];
 
-const formatPrice = (price) => `UGX ${price.toLocaleString('en-US')}`;
+function formatPrice(price) {
+  return `UGX ${Number(price).toLocaleString('en-US')}`;
+}
 
-function getFavorites() {
+function loadFavorites() {
   try {
-    return JSON.parse(localStorage.getItem('napioFavorites')) || [];
+    const saved = JSON.parse(localStorage.getItem('napio_favorites_v1'));
+    return Array.isArray(saved) ? saved : [];
   } catch {
     return [];
   }
 }
 
-function saveFavorite(id) {
-  const favorites = getFavorites();
-  const updated = favorites.includes(id)
-    ? favorites.filter((favoriteId) => favoriteId !== id)
-    : [...favorites, id];
-  localStorage.setItem('napioFavorites', JSON.stringify(updated));
-  return updated;
-}
-
-function productCard(product) {
-  const favorites = getFavorites();
-  const favorite = favorites.includes(product.id);
+function cardMarkup(product) {
+  const savedIds = loadFavorites();
+  const isSaved = savedIds.includes(product.id);
   return `
     <article class="product-card">
-      <div class="product-art product-${product.id}" role="img" aria-label="${product.name}">
-        <span>${product.category}</span>
-      </div>
+      <div class="product-art" aria-hidden="true"><span>${product.category}</span></div>
       <div class="product-info">
         <p class="product-category">${product.category}</p>
         <h3>${product.name}</h3>
+        <p>${product.finish}</p>
         <p class="product-price">${formatPrice(product.price)}</p>
         <div class="card-actions">
           <button class="details-button" type="button" data-product-id="${product.id}">View details</button>
-          <button class="favorite-button ${favorite ? 'saved' : ''}" type="button" data-favorite-id="${product.id}" aria-label="${favorite ? 'Remove' : 'Add'} ${product.name} ${favorite ? 'from' : 'to'} favorites" aria-pressed="${favorite}">${favorite ? '♥' : '♡'}</button>
+          <button class="favorite-button${isSaved ? ' saved' : ''}" type="button" data-favorite-id="${product.id}" aria-label="${isSaved ? 'Remove' : 'Add'} ${product.name} ${isSaved ? 'from' : 'to'} favorites" aria-pressed="${isSaved}">${isSaved ? '♥' : '♡'}</button>
         </div>
       </div>
     </article>`;
 }
 
-function renderProducts(container, products) {
-  if (container) container.innerHTML = products.map(productCard).join('');
-}
-
-async function loadProducts() {
+async function loadFeatured() {
+  if (!featuredContainer) return;
   try {
     const response = await fetch('data/products.json');
     if (!response.ok) throw new Error(`Unable to load products (${response.status})`);
-    allProducts = await response.json();
-
-    if (featuredContainer) {
-      renderProducts(featuredContainer, allProducts.filter((product) => product.featured).slice(0, 4));
-    }
-
-    if (catalogContainer) {
-      renderProducts(catalogContainer, allProducts);
-      document.querySelectorAll('.filter').forEach((button) => {
-        button.addEventListener('click', () => {
-          document.querySelectorAll('.filter').forEach((filter) => {
-            filter.classList.remove('active');
-            filter.setAttribute('aria-pressed', 'false');
-          });
-          button.classList.add('active');
-          button.setAttribute('aria-pressed', 'true');
-          const category = button.dataset.category;
-          const filtered = category === 'all'
-            ? allProducts
-            : allProducts.filter((product) => product.category === category);
-          renderProducts(catalogContainer, filtered);
-        });
-      });
-    }
+    const products = await response.json();
+    featuredProducts = products.filter((product) => product.featured).slice(0, 4);
+    featuredContainer.innerHTML = featuredProducts.map(cardMarkup).join('');
   } catch (error) {
     if (errorMessage) errorMessage.textContent = 'Our collection could not be loaded. Please refresh the page.';
-    console.error(error);
   }
 }
-
-const dialog = document.querySelector('#product-dialog');
-const dialogContent = document.querySelector('#dialog-content');
 
 document.addEventListener('click', (event) => {
   const detailsButton = event.target.closest('[data-product-id]');
   if (detailsButton) {
-    const product = allProducts.find((item) => item.id === Number(detailsButton.dataset.productId));
+    const product = featuredProducts.find((item) => item.id === detailsButton.dataset.productId);
     if (product && dialog && dialogContent) {
       dialogContent.innerHTML = `
         <p class="eyebrow">${product.category}</p>
@@ -115,8 +78,8 @@ document.addEventListener('click', (event) => {
         <p>${product.description}</p>
         <dl class="product-details">
           <div><dt>Price</dt><dd>${formatPrice(product.price)}</dd></div>
-          <div><dt>Materials</dt><dd>${product.material}</dd></div>
-          <div><dt>Color</dt><dd>${product.color}</dd></div>
+          <div><dt>Finish</dt><dd>${product.finish}</dd></div>
+          <div><dt>Category</dt><dd>${product.category}</dd></div>
         </dl>`;
       dialog.showModal();
     }
@@ -124,15 +87,13 @@ document.addEventListener('click', (event) => {
 
   const favoriteButton = event.target.closest('[data-favorite-id]');
   if (favoriteButton) {
-    const id = Number(favoriteButton.dataset.favoriteId);
-    saveFavorite(id);
-    const container = favoriteButton.closest('.product-grid');
-    if (container) {
-      const visibleCards = [...container.querySelectorAll('.details-button')];
-      const visibleIds = visibleCards.map((button) => Number(button.dataset.productId));
-      const visibleProducts = allProducts.filter((product) => visibleIds.includes(product.id));
-      renderProducts(container, visibleProducts);
-    }
+    const id = favoriteButton.dataset.favoriteId;
+    const savedIds = loadFavorites();
+    const updated = savedIds.includes(id)
+      ? savedIds.filter((savedId) => savedId !== id)
+      : [...savedIds, id];
+    localStorage.setItem('napio_favorites_v1', JSON.stringify(updated));
+    if (featuredContainer) featuredContainer.innerHTML = featuredProducts.map(cardMarkup).join('');
   }
 
   if (event.target.closest('.dialog-close') && dialog) dialog.close();
@@ -144,4 +105,4 @@ if (dialog) {
   });
 }
 
-loadProducts();
+loadFeatured();

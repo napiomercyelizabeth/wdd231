@@ -298,6 +298,47 @@ dialog::backdrop { background: rgba(26,26,26,.65); }
 .request-details dt { font-weight: 700; }
 .request-details dd { margin: 0; overflow-wrap: anywhere; }
 
+.page-intro { padding: 3.5rem 1.25rem 2rem; }
+.page-intro h1 { margin: 0; font-size: clamp(2.4rem, 10vw, 4.8rem); line-height: 1; }
+.page-intro > p:last-child { max-width: 650px; }
+.catalog-controls { display: grid; gap: 1rem; padding: 0 1.25rem 1.5rem; }
+.filter-group { display: flex; flex-wrap: wrap; gap: .5rem; }
+.filter-btn, .btn-secondary, .btn-save {
+  min-height: 44px;
+  border: 1px solid var(--ink);
+  border-radius: 999px;
+  padding: .55rem .85rem;
+  background: var(--white);
+  color: var(--ink);
+  cursor: pointer;
+  font-weight: 700;
+}
+.filter-btn.is-selected, .filter-btn[aria-pressed='true'] { background: var(--pink); }
+.saved-summary { margin: 0; font-weight: 700; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.about-grid { display: grid; gap: 1.25rem; padding: 0 1.25rem 2rem; }
+.info-card, .form-section, .summary-card {
+  background: var(--white);
+  border: 1px solid #e8bac9;
+  border-radius: 16px;
+  padding: 1.25rem;
+}
+.form-section { margin: 0 1.25rem 4rem; }
+.inquiry-form { display: grid; gap: .75rem; }
+.field { display: grid; gap: .35rem; }
+.field label { font-weight: 700; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 44px; border: 1px solid #8c7d82; border-radius: 8px;
+  padding: .65rem; background: var(--white);
+}
+.summary-card { margin: 0 1.25rem 4rem; }
+.summary-list { display: grid; grid-template-columns: 150px 1fr; margin: 0 0 1.5rem; }
+.summary-list dt, .summary-list dd { margin: 0; padding: .65rem 0; border-bottom: 1px solid #f1d1dc; }
+.summary-list dt { font-weight: 700; }
+.summary-list dd { overflow-wrap: anywhere; }
+.footer-links { display: flex; gap: 1rem; }
+.footer-links a { color: var(--white); }
+
 @media (min-width: 700px) {
   .site-header { grid-template-columns: 220px 1fr; padding: .75rem 3rem; }
   .menu-button { display: none; }
@@ -327,3 +368,6 @@ dialog::backdrop { background: rgba(26,26,26,.65); }
 }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media (forced-colors: active) {
+  .filter-btn.is-selected, .favorite-button.saved, .navigation a.active { outline: 2px solid currentColor; }
+}
